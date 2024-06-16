@@ -25,9 +25,10 @@ def avg_sort(numbers_list, old_list = None):
             continue
         halfs[1].append(i)
         continue
-    halfs[0] = avg_sort(halfs[0], numbers_list)
-    halfs[1] = avg_sort(halfs[1], numbers_list)
-    return halfs[0] + halfs[1]
+    result = []
+    result.extend(avg_sort(halfs[0], numbers_list))
+    result.extend(avg_sort(halfs[1], numbers_list))
+    return  result
 
 
 
