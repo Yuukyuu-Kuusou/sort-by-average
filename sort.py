@@ -31,14 +31,14 @@ def avg_sort(numbers_list, old_list = None):
 
 
 
-list_edge = 256
+list_edge = 500
 numbers = generate_unordered_list(list_edge)
 
 print("Unordered List:",numbers)
 
 print("Ordered List:",avg_sort(numbers))
 
-numbers = generate_uneven_list(256)
+numbers = generate_uneven_list(list_edge)
 
 print("Unordered Uneven List:",numbers)
 
