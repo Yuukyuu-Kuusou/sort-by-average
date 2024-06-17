@@ -18,10 +18,9 @@ def avg_sort(numbers_list, old_list = None):
     if len(numbers_list) <= 1 or old_list == numbers_list:
         return numbers_list
     avg = sum(numbers_list) / len(numbers_list)
-    halfs = [[],[]]
-    halfs[0] = [x for x in numbers_list if x < avg]
-    halfs[1] = [x for x in numbers_list if x >= avg]
-    return  avg_sort(halfs[0], numbers_list) + avg_sort(halfs[1], numbers_list)
+    left = [x for x in numbers_list if x < avg]
+    right = [x for x in numbers_list if x >= avg]
+    return  avg_sort(left, numbers_list) + avg_sort(right, numbers_list)
 
 
 
